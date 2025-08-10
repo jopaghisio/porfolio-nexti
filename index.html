@@ -1,0 +1,421 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>João Paulo Garavello Ghisio - Growth Specialist para Nexti</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        .header {
+            background: rgba(255, 255, 255, 0.95);
+            backdrop-filter: blur(10px);
+            padding: 2rem 0;
+            box-shadow: 0 2px 20px rgba(0,0,0,0.1);
+        }
+
+        .header-content {
+            display: grid;
+            grid-template-columns: 1fr 2fr;
+            gap: 2rem;
+            align-items: center;
+        }
+
+        .profile-img {
+            width: 200px;
+            height: 200px;
+            border-radius: 50%;
+            border: 5px solid #667eea;
+            object-fit: cover;
+            margin: 0 auto;
+            display: block;
+        }
+
+        .header-text {
+            text-align: left;
+        }
+
+        .header-text h1 {
+            font-size: 2.5rem;
+            color: #2c3e50;
+            margin-bottom: 0.5rem;
+        }
+
+        .subtitle {
+            font-size: 1.2rem;
+            color: #667eea;
+            font-weight: 600;
+            margin-bottom: 1rem;
+        }
+
+        .nexti-focus {
+            background: linear-gradient(135deg, #667eea, #764ba2);
+            color: white;
+            padding: 1rem;
+            border-radius: 10px;
+            margin: 1rem 0;
+            box-shadow: 0 4px 15px rgba(102, 126, 234, 0.3);
+        }
+
+        .nexti-focus h3 {
+            margin-bottom: 0.5rem;
+            font-size: 1.3rem;
+        }
+
+        .section {
+            background: white;
+            margin: 2rem 0;
+            padding: 2rem;
+            border-radius: 15px;
+            box-shadow: 0 5px 25px rgba(0,0,0,0.1);
+        }
+
+        .section h2 {
+            color: #2c3e50;
+            margin-bottom: 1.5rem;
+            font-size: 2rem;
+            border-bottom: 3px solid #667eea;
+            padding-bottom: 0.5rem;
+        }
+
+        .skills-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 1.5rem;
+            margin-top: 2rem;
+        }
+
+        .skill-card {
+            background: linear-gradient(135deg, #f8f9fa, #e9ecef);
+            padding: 1.5rem;
+            border-radius: 10px;
+            border-left: 4px solid #667eea;
+            transition: transform 0.3s ease;
+        }
+
+        .skill-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 25px rgba(102, 126, 234, 0.2);
+        }
+
+        .skill-card h3 {
+            color: #2c3e50;
+            margin-bottom: 1rem;
+            display: flex;
+            align-items: center;
+        }
+
+        .skill-card i {
+            margin-right: 0.5rem;
+            color: #667eea;
+        }
+
+        .experience-item {
+            background: #f8f9fa;
+            padding: 1.5rem;
+            border-radius: 10px;
+            margin-bottom: 1.5rem;
+            border-left: 4px solid #667eea;
+        }
+
+        .experience-item h3 {
+            color: #2c3e50;
+            margin-bottom: 0.5rem;
+        }
+
+        .company {
+            color: #667eea;
+            font-weight: 600;
+            margin-bottom: 1rem;
+        }
+
+        .nexti-metrics {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 1rem;
+            margin-top: 2rem;
+        }
+
+        .metric-card {
+            background: linear-gradient(135deg, #667eea, #764ba2);
+            color: white;
+            padding: 1.5rem;
+            border-radius: 10px;
+            text-align: center;
+            box-shadow: 0 4px 15px rgba(102, 126, 234, 0.3);
+        }
+
+        .metric-card h3 {
+            font-size: 2rem;
+            margin-bottom: 0.5rem;
+        }
+
+        .cta-section {
+            background: linear-gradient(135deg, #2c3e50, #34495e);
+            color: white;
+            padding: 3rem;
+            text-align: center;
+            border-radius: 15px;
+            margin: 2rem 0;
+        }
+
+        .cta-button {
+            background: #667eea;
+            color: white;
+            padding: 1rem 2rem;
+            border: none;
+            border-radius: 50px;
+            font-size: 1.1rem;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            text-decoration: none;
+            display: inline-block;
+            margin-top: 1rem;
+        }
+
+        .cta-button:hover {
+            background: #5a67d8;
+            transform: translateY(-2px);
+            box-shadow: 0 5px 15px rgba(102, 126, 234, 0.4);
+        }
+
+        .value-prop {
+            background: linear-gradient(135deg, #e8f4fd, #f8f9fa);
+            padding: 2rem;
+            border-radius: 15px;
+            margin: 2rem 0;
+            border: 2px solid #667eea;
+        }
+
+        .value-prop h3 {
+            color: #2c3e50;
+            margin-bottom: 1rem;
+            text-align: center;
+        }
+
+        .value-list {
+            list-style: none;
+            padding: 0;
+        }
+
+        .value-list li {
+            margin: 1rem 0;
+            padding-left: 2rem;
+            position: relative;
+        }
+
+        .value-list li::before {
+            content: "✓";
+            position: absolute;
+            left: 0;
+            color: #667eea;
+            font-weight: bold;
+            font-size: 1.2rem;
+        }
+
+        @media (max-width: 768px) {
+            .header-content {
+                grid-template-columns: 1fr;
+                text-align: center;
+            }
+
+            .header-text {
+                text-align: center;
+            }
+
+            .header-text h1 {
+                font-size: 2rem;
+            }
+
+            .skills-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .nexti-metrics {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header class="header">
+        <div class="container">
+            <div class="header-content">
+                <div>
+                    <img src="https://avatars.githubusercontent.com/u/yourusername" alt="João Paulo Garavello Ghisio" class="profile-img">
+                </div>
+                <div class="header-text">
+                    <h1>João Paulo Garavello Ghisio</h1>
+                    <p class="subtitle">Growth Specialist & Marketing Estratégico</p>
+                    <div class="nexti-focus">
+                        <h3>🎯 Especialista em Crescimento para HRTechs</h3>
+                        <p>Transformando soluções de RH em líderes de mercado através de estratégias de growth comprovadas e análise de dados avançada.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <main class="container">
+        <section class="value-prop">
+            <h3>Por que minha experiência é perfeita para a Nexti?</h3>
+            <ul class="value-list">
+                <li><strong>5+ anos acelerando startups</strong> - Experiência direta em escalar empresas de tecnologia</li>
+                <li><strong>Expertise em saúde digital</strong> - Conhecimento profundo do setor que se conecta diretamente com bem-estar corporativo</li>
+                <li><strong>Histórico com plataformas B2B</strong> - Experiência scaling soluções para 2.3k+ empresas restaurantes</li>
+                <li><strong>Foco em automação</strong> - Alinhamento direto com as soluções de automação de RH da Nexti</li>
+                <li><strong>Análise de dados avançada</strong> - Capacidade de otimizar os KPIs críticos para crescimento sustentável</li>
+            </ul>
+        </section>
+
+        <section class="section">
+            <h2><i class="fas fa-chart-line"></i> Como Posso Acelerar o Crescimento da Nexti</h2>
+            <div class="skills-grid">
+                <div class="skill-card">
+                    <h3><i class="fas fa-users"></i> Expansão de Base de Clientes</h3>
+                    <p>Estratégias para crescer de 300+ para 1000+ empresas clientes, focando em segmentação inteligente e automação de aquisição.</p>
+                </div>
+                <div class="skill-card">
+                    <h3><i class="fas fa-robot"></i> Marketing de Automação</h3>
+                    <p>Desenvolvimento de jornadas automatizadas que educam leads sobre transformação digital em RH, aumentando conversão.</p>
+                </div>
+                <div class="skill-card">
+                    <h3><i class="fas fa-database"></i> Growth Analytics</h3>
+                    <p>Análise profunda dos dados de +600k vidas impactadas para identificar padrões e oportunidades de expansão.</p>
+                </div>
+                <div class="skill-card">
+                    <h3><i class="fas fa-building"></i> Marketing B2B Enterprise</h3>
+                    <p>Estratégias específicas para atingir grandes empresas que precisam de transformação digital em RH.</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="section">
+            <h2><i class="fas fa-target"></i> Metas Específicas para a Nexti</h2>
+            <div class="nexti-metrics">
+                <div class="metric-card">
+                    <h3>2x</h3>
+                    <p>Base de clientes em 12 meses</p>
+                </div>
+                <div class="metric-card">
+                    <h3>40%</h3>
+                    <p>Redução no CAC através de automação</p>
+                </div>
+                <div class="metric-card">
+                    <h3>1M+</h3>
+                    <p>Vidas impactadas mensalmente</p>
+                </div>
+                <div class="metric-card">
+                    <h3>25%</h3>
+                    <p>Aumento na retenção de clientes</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="section">
+            <h2><i class="fas fa-briefcase"></i> Experiência Relevante</h2>
+            <div class="experience-item">
+                <h3>Growth Strategy - Startup de Bem-Estar Digital</h3>
+                <p class="company">Plataforma com jornadas guiadas e comunidade ativa</p>
+                <p><strong>Relevância para Nexti:</strong> Experiência em engajamento de usuários e criação de comunidades digitais, essencial para as funcionalidades de comunicação interna e pesquisas interativas da Nexti.</p>
+            </div>
+            <div class="experience-item">
+                <h3>Marketing & Growth - Plataforma B2B de Larga Escala</h3>
+                <p class="company">2.3k restaurantes | 13M consumidores impactados</p>
+                <p><strong>Relevância para Nexti:</strong> Experiência direta em escalar plataformas B2B que atendem milhares de empresas, similar ao desafio da Nexti de crescer sua base de +300 empresas.</p>
+            </div>
+            <div class="experience-item">
+                <h3>Análise de Dados - Soluções Fintech</h3>
+                <p class="company">Pagamentos e antecipação empresarial</p>
+                <p><strong>Relevância para Nexti:</strong> Conhecimento em análise de dados complexos e automação de processos financeiros, aplicável aos módulos de benefícios e gestão operacional da Nexti.</p>
+            </div>
+        </section>
+
+        <section class="section">
+            <h2><i class="fas fa-rocket"></i> Estratégias Imediatas para a Nexti</h2>
+            <div class="skills-grid">
+                <div class="skill-card">
+                    <h3><i class="fas fa-search"></i> SEO para HRTech</h3>
+                    <p>Dominar termos como "transformação digital RH", "ponto eletrônico facial" e "gestão de benefícios corporativos".</p>
+                </div>
+                <div class="skill-card">
+                    <h3><i class="fas fa-users-cog"></i> Marketing de Conteúdo</h3>
+                    <p>Criar conteúdo educativo sobre redução de horas extras, compliance trabalhista e eficiência operacional.</p>
+                </div>
+                <div class="skill-card">
+                    <h3><i class="fas fa-handshake"></i> Parcerias Estratégicas</h3>
+                    <p>Desenvolver partnerships com ERPs e sistemas de folha de pagamento para ampliar integração.</p>
+                </div>
+                <div class="skill-card">
+                    <h3><i class="fas fa-chart-bar"></i> Growth Hacking</h3>
+                    <p>Implementar loops virais através dos cases de sucesso (+600k vidas impactadas) para gerar credibilidade.</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="cta-section">
+            <h2>Vamos Transformar o Crescimento da Nexti Juntos?</h2>
+            <p>Com minha experiência em growth de startups B2B e conhecimento profundo em automação e análise de dados, posso ajudar a Nexti a alcançar o próximo nível de transformação digital em RH.</p>
+            <a href="mailto:joaopaulo@email.com" class="cta-button">
+                <i class="fas fa-envelope"></i> Vamos Conversar
+            </a>
+            <a href="https://linkedin.com/in/seu-perfil" class="cta-button" style="margin-left: 1rem;">
+                <i class="fab fa-linkedin"></i> LinkedIn
+            </a>
+        </section>
+    </main>
+
+    <script>
+        // Animação suave para os cards
+        const observerOptions = {
+            threshold: 0.1,
+            rootMargin: '0px 0px -50px 0px'
+        };
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.style.opacity = '1';
+                    entry.target.style.transform = 'translateY(0)';
+                }
+            });
+        }, observerOptions);
+
+        document.querySelectorAll('.skill-card, .experience-item, .metric-card').forEach(el => {
+            el.style.opacity = '0';
+            el.style.transform = 'translateY(20px)';
+            el.style.transition = 'opacity 0.6s ease, transform 0.6s ease';
+            observer.observe(el);
+        });
+
+        // Efeito de hover nos botões CTA
+        document.querySelectorAll('.cta-button').forEach(button => {
+            button.addEventListener('mouseenter', function() {
+                this.style.transform = 'translateY(-3px) scale(1.05)';
+            });
+            
+            button.addEventListener('mouseleave', function() {
+                this.style.transform = 'translateY(-2px) scale(1)';
+            });
+        });
+    </script>
+</body>
+</html>
